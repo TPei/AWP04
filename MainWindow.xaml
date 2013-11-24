@@ -8,9 +8,9 @@
         <Button x:Name="undo" Content="zurück" HorizontalAlignment="Left" Margin="552,130,0,0" VerticalAlignment="Top" Width="51"  Click="undoButton"/>
         <Button x:Name="vor" Content="vor" HorizontalAlignment="Left" VerticalAlignment="Top" Width="48" Margin="627,130,0,0" Click="redoButton"/>
         <Slider x:Name="sliderStaerke" HorizontalAlignment="Left" Margin="550,93,0,0" VerticalAlignment="Top" Minimum="1" SmallChange="1" Width="125" ValueChanged="thicknessValueChange"/>
-        <Slider x:Name="red" HorizontalAlignment="Left" Margin="552,203,0,0" VerticalAlignment="Top" Width="123" Maximum="255" SmallChange="1" Background="Red" ValueChanged="changeColor"/>
-        <Slider x:Name="green" HorizontalAlignment="Left" Margin="552,226,0,0" VerticalAlignment="Top" Width="123" Maximum="255" SmallChange="1" Background="#FF28C553" ValueChanged="changeColor"/>
-        <Slider x:Name="blue" HorizontalAlignment="Left" Margin="552,249,0,0" VerticalAlignment="Top" Width="123" Maximum="255" SmallChange="1" Background="#FF0547F5" ValueChanged="changeColor"/>
+        <Slider x:Name="red" HorizontalAlignment="Left" Margin="552,203,0,0" VerticalAlignment="Top" Width="123" Maximum="255" SmallChange="20" Background="Red" ValueChanged="changeColor"/>
+        <Slider x:Name="green" HorizontalAlignment="Left" Margin="552,226,0,0" VerticalAlignment="Top" Width="123" Maximum="255" SmallChange="20" Background="#FF28C553" ValueChanged="changeColor"/>
+        <Slider x:Name="blue" HorizontalAlignment="Left" Margin="552,249,0,0" VerticalAlignment="Top" Width="123" Maximum="255" SmallChange="20" Background="#FF0547F5" ValueChanged="changeColor"/>
         <Label x:Name="Dicke" Content="Dicke" HorizontalAlignment="Left" Margin="550,62,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.733,-0.167" Width="90"/>
 
     </Grid>

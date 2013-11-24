@@ -22,7 +22,6 @@ namespace UE04
     public partial class MainWindow : Window
     {
         private Stack<Stroke> redoStack = new Stack<Stroke>();
-        private DrawingAttributes brush = new DrawingAttributes();
 
         public MainWindow()
         {
@@ -61,8 +60,7 @@ namespace UE04
             brushColor.A = 255;
             
             // change brush accordingly and set as inkcanvas brush
-            this.brush.Color = brushColor;
-            this.myInkCanvas.DefaultDrawingAttributes = this.brush;
+            this.myInkCanvas.DefaultDrawingAttributes.Color = brushColor;
             
             // for information purposes also change "stift" label background color
             this.label2.Background = new SolidColorBrush(brushColor);
@@ -72,9 +70,9 @@ namespace UE04
         private void thicknessValueChange(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             int thickness = (int)this.sliderStaerke.Value;
-            this.brush.Height = thickness;
-            this.brush.Width = thickness;
-            this.myInkCanvas.DefaultDrawingAttributes = this.brush;
+
+            myInkCanvas.DefaultDrawingAttributes.Height = thickness;
+            myInkCanvas.DefaultDrawingAttributes.Width = thickness;
         }
 
         protected override void OnPreviewMouseDown(System.Windows.Input.MouseButtonEventArgs e)
